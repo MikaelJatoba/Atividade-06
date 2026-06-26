@@ -38,13 +38,13 @@ header {
 }
 
 /*Classe que definirá como os itens se organizarão dentro do corpo*/
-.conteudos_corpo{
+section{
     display: flex; /* organiza automaticamente os elementos */ 
     flex: 1; /* faz com que a div ocupe os espaços vagos */
 }
 
 /* ID responsável por criar a caixa com os botões para trocar de página */
-#conteudos {
+nav {
     text-align: center; /* Substitua aqui! Isso centraliza botões e textos inline */
     float: left; /* "alinha" à esquerda da div_mestre */
     background-color: rgb(70, 80, 80); /* define a cor de fundo */
@@ -54,7 +54,7 @@ header {
 }
 
 /* ID responsável por criar a caixa principal do cabeçalho da página */
-#corpo {
+article {
     align-items: center;
     display: flex; /* organiza automaticamente os elementos */ 
     float: left; /* "alinha" à esquerda da div_mestre (ao lado do conteúdo) */
@@ -148,34 +148,34 @@ footer {
     <div class="div_mestre">
         <header> <h1 class="padraotxt"> Página do Mikael, Otávio e Amanda </h1> </header>
         
-        <div class="conteudos_corpo" >
-            <div id="conteudos">        
-                    <p>
-                    <button class="botoes" type="button" onclick="trocar_pag(6)"> Página Inicial</button>
-                    <button class="botoes" type="button" onclick="trocar_pag(0)"> Currículo Mikael </button>
-                    <button class="botoes" type="button" onclick="trocar_pag(1)"> 30PRAUM</button>
-                    <button class="botoes" type="button" onclick="trocar_pag(2)"> Currículo Otávio </button>
-                    <button class="botoes" type="button" onclick="trocar_pag(3)"> Picarreta </button>
-                    <button class="botoes" type="button" onclick="trocar_pag(4)"> Currículo Amanda </button>
-                    <button class="botoes" type="button" onclick="trocar_pag(5)"> Dean </button>
-                    </p>
-                </div>
+        <section>
+            <nav>        
+                <p>
+                <button class="botoes" type="button" onclick="trocar_pag(6)"> Página Inicial</button>
+                <button class="botoes" type="button" onclick="trocar_pag(0)"> Currículo Mikael </button>
+                <button class="botoes" type="button" onclick="trocar_pag(1)"> 30PRAUM</button>
+                <button class="botoes" type="button" onclick="trocar_pag(2)"> Currículo Otávio </button>
+                <button class="botoes" type="button" onclick="trocar_pag(3)"> Picarreta </button>
+                <button class="botoes" type="button" onclick="trocar_pag(4)"> Currículo Amanda </button>
+                <button class="botoes" type="button" onclick="trocar_pag(5)"> Dean </button>
+                </p>
+            </nav>
                     
-                <div id="corpo">
+                <article>
                     <embed id="pagininha" src="pag_principal.html" width="100%" height="600px">
-                </div>
-            </div>
+                </article>
+    </section>
         <footer class="criadores2">
             <div class="criadores">
                 <p class="padraotxt">Mikael Jatobá <br> mvaj1@aluno.ifal.edu.br</p>
                 <p class="padraotxt">Otávio Holanda <br> loah1@aluno.ifal.edu.br</p>
                 <p class="padraotxt">Amanda Novais <br> atn1@aluno.ifal.edu.br</p>
-            </div>
-            
-            <div>
-                <p class="padraotxt txtrodape direitos-reservados"> © 2026 - Todos os direitos reservados. </p>
-            </div>
+            </div>  
 
+            <div>
+                <p class="padraotxt txtrodape direitos-reservados"> &copy 2026 - Todos os direitos reservados. </p>
+            </div>
+        
         </footer>
     </div>    
 </body>
