@@ -13,19 +13,6 @@
 
 <style>
 
-/* Classe criada para definir características da div mestre (div principal)*/
-.div_mestre {
-    width: 80%; /* a div_mestre vai ocupar 80% da página*/
-    height: 800px; /* a altura da div_mestre será de 750px */
-    flex-direction: column; /* organiza os elementos em colunas (verticalmente) */ 
-    display: flex; /* organiza automaticamente os elementos */ 
-    margin-top: 1.5%; /* a distância do topo da página até o cabeçalho */
-    margin-left: 10%; /* a distância da esquerda da página até o cabeçalho */
-    margin-right: 10%; /* a distância da direita da página até o cabeçalho */
-    margin-bottom: 1.5%; /* a distância da parte de baixo da página até o cabeçalho*/
-
-}
-
 /* ID responsável por criar a caixa principal do cabeçalho da página */
 
 header {
@@ -33,14 +20,20 @@ header {
     align-items: center; /* alinha horizontalmente */
     display: flex; /* organiza automaticamente os elementos */
     background-color: rgb(57, 66, 66); /* define a cor de fundo */
-    width: 100%; /* o cabeçalho vai ocupar 100% da largura da div_mestre */
-    height: 100px; /* o cabeçalho vai ocupar 100px de altura dentro da div_mestre*/
+    width: 80%; /* o cabeçalho vai ocupar 100% da largura da div_mestre */
+    margin-top: 1.5%; /* a distância do topo da página até o cabeçalho */
+    margin-left: 10%; /* a distância da esquerda da página até o cabeçalho */
+    margin-right: 10%; /* a distância da direita da página até o cabeçalho */
+
 }
 
 /*Classe que definirá como os itens se organizarão dentro do corpo*/
 section{
+    width: 80%;
     display: flex; /* organiza automaticamente os elementos */ 
     flex: 1; /* faz com que a div ocupe os espaços vagos */
+    margin-right: 10%; /* a distância da direita da página até o cabeçalho */
+    margin-left: 10%; /* a distância da esquerda da página até o cabeçalho */
 }
 
 /* ID responsável por criar a caixa com os botões para trocar de página */
@@ -48,7 +41,6 @@ nav {
     text-align: center; /* Substitua aqui! Isso centraliza botões e textos inline */
     float: left; /* "alinha" à esquerda da div_mestre */
     background-color: rgb(70, 80, 80); /* define a cor de fundo */
-    height: 100%; /* o conteúdo vai ocupar 100% da altura do "conteudos_corpo" */
     width: 20%; /* o conteúdo vai ocupar 20% da largura do "conteudos_corpo" */
     padding: 10px; /* define a distância do conteúdo dentro do "conteúdo" até a borda da div */
 }
@@ -59,7 +51,6 @@ article {
     display: flex; /* organiza automaticamente os elementos */ 
     float: left; /* "alinha" à esquerda da div_mestre (ao lado do conteúdo) */
     background-color: rgb(255, 255, 255); /* define a cor de fundo*/
-    height: 100%; /* o conteúdo vai ocupar 100% da altura do "conteudos_corpo" */
     width: 80%; /* o conteúdo vai ocupar 80% da largura do "conteudos_corpo" */
 }
 
@@ -69,8 +60,10 @@ footer {
     justify-content: center; /* alinha verticalmente */
     align-items: center; /* alinha horizontalmente */
     display: flex   ; /* organiza automaticamente os elementos */
-    width: 100%; /* o cabeçalho vai ocupar 100% da largura da div_mestre */
-    height: 150px; /* a altura do rodapé será de 100px */
+    width: 80%; /* o cabeçalho vai ocupar 100% da largura da div_mestre */
+    margin-right: 10%; /* a distância da direita da página até o cabeçalho */
+        margin-left: 10%; /* a distância da esquerda da página até o cabeçalho */
+    margin-bottom: 1.5%; /* a distância da parte de baixo da página até o cabeçalho*/
 }
 
 /* Nova classe para fazer os e-mails ficarem lado a lado na fileira de cima */
@@ -145,7 +138,7 @@ footer {
         <p>NAVEGADOR DE POBRE DO CRANCO, MUDA ISSO SEU INDIGENTE</p>
     </noscript>
 
-    <div class="div_mestre">
+    
         <header> <h1 class="padraotxt"> Página do Mikael, Otávio e Amanda </h1> </header>
         
         <section>
@@ -176,8 +169,7 @@ footer {
                 <p class="padraotxt txtrodape direitos-reservados"> &copy 2026 - Todos os direitos reservados. </p>
             </div>
         
-        </footer>
-    </div>    
+        </footer>  
 </body>
 
 </html>
