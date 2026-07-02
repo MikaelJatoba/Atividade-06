@@ -7,13 +7,18 @@
         <link rel="icon" type="image/x-icon" href="img/logo.png">
 
         <style>
-            article {
+            * {
+                box-sizing:border-box; /*garante que as propriedades de padding e borda fiquem dentro das dimensões totais declaradas*/
+            }
+            #fundo{
                 background-image: url('img/terra.png'); /*define fundo*/
-                margin-left: 1.5%; /*margem*/
+            }
+            article {
+                margin-left: 2.5%; /*margem*/
                 color: whitesmoke; /*cor dos txr*/
             }
             .cabecalho{
-                width: 19.5%; /*margem*/
+                width: 19%; /*margem*/
                 height: 100px; /*altura do cabecalho*/
                 float: left; /*coloca tudo na esquerda*/
                 display: flex; /*organiza as divs*/
@@ -24,7 +29,7 @@
                 font-size: 25px; /*tamanho das letras*/
             }
             .colunas{
-                width: 19.5%; /*largura das divs*/
+                width: 19%; /*largura das divs*/
                 height: 200px; /*altura das divs*/
                 float: left; /*alinha tudo na esquerda*/
                 display: flex; /*organiza as divs*/
@@ -35,7 +40,7 @@
                 font-size: 20px; /*tamanho da letra*/
             }
             .inf{
-                width: 98.5%; /*largura*/
+                width: 95%; /*largura*/
                 height: 100px; /*altura*/
                 float: left; /*alinha tudo na esquerda*/
                 display: flex; /*organiza as divs*/
@@ -46,10 +51,48 @@
                 font-size: 30px; /*tamanho dos txt*/
             }
 
+
+            @media (max-width:768px){
+
+            article{
+                width:100%;
+                margin:0;
+            }
+
+            .cabecalho,
+            .colunas,
+            .inf{
+                width:100%;
+                float:none;
+            }
+
+            .cabecalho{
+                height:70px;
+                font-size:20px;
+            }
+
+            .colunas{
+                height:auto;
+                min-height:150px;
+                font-size:18px;
+            }
+
+            .inf{
+                height:auto;
+                padding:20px;
+                font-size:22px;
+            }
+
+            img{
+                max-width:80%;
+                height:auto;
+            }
+
+        }
         </style>
     </head>
 
-    <body>
+    <body id="fundo">
         <article>
             <div class="cabecalho">PICARETA</div>
             <div class="cabecalho">DURABILIDADE</div>

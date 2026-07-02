@@ -7,14 +7,18 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MHA Pages</title>
     <link rel="icon" type="image/png" href="./img/favicon.png">
-</head>
+
 
 <style>
 
-/* ID responsável por criar a caixa principal do cabeçalho da página */
+* {
+    box-sizing:border-box; /*garante que as propriedades de padding e borda fiquem dentro das dimensões totais declaradas*/
+}
 
+/* Estilização do cabeçalho principal */
 header {
     justify-content: center; /* alinha verticalmente */
     align-items: center; /* alinha horizontalmente */
@@ -27,42 +31,41 @@ header {
 
 }
 
-/*Classe que definirá como os itens se organizarão dentro do corpo*/
-section{
+/*Estilização da parte principal do site*/
+main{
     width: 80%;
+    height: 800px;
     display: flex; /* organiza automaticamente os elementos */ 
-    flex: 1; /* faz com que a div ocupe os espaços vagos */
     margin-right: 10%; /* a distância da direita da página até o cabeçalho */
     margin-left: 10%; /* a distância da esquerda da página até o cabeçalho */
 }
 
-/* ID responsável por criar a caixa com os botões para trocar de página */
+/* Estilização da parte navegável do site (botões) */
 nav {
-    text-align: center; /* Substitua aqui! Isso centraliza botões e textos inline */
-    float: left; /* "alinha" à esquerda da div_mestre */
+    text-align: center; /* Alinha os textos no centro */
     background-color: rgb(70, 80, 80); /* define a cor de fundo */
     width: 20%; /* o conteúdo vai ocupar 20% da largura do "conteudos_corpo" */
+    height: 100%;
     padding: 10px; /* define a distância do conteúdo dentro do "conteúdo" até a borda da div */
 }
 
-/* ID responsável por criar a caixa principal do cabeçalho da página */
+/* Estilização da caixa principal com o principal conteúdo da página */
 article {
     align-items: center;
-    display: flex; /* organiza automaticamente os elementos */ 
-    float: left; /* "alinha" à esquerda da div_mestre (ao lado do conteúdo) */
     background-color: rgb(255, 255, 255); /* define a cor de fundo*/
+    height: 100%;
     width: 80%; /* o conteúdo vai ocupar 80% da largura do "conteudos_corpo" */
 }
 
-/* ID responsável por criar a caixa principal do rodapé da página */
+/* Estilização do rodapé */
 footer {
     background-color: rgb(62, 62, 68); /* define a cor de fundo*/
     justify-content: center; /* alinha verticalmente */
     align-items: center; /* alinha horizontalmente */
-    display: flex   ; /* organiza automaticamente os elementos */
+    display: flex; /* organiza automaticamente os elementos */
     width: 80%; /* o cabeçalho vai ocupar 100% da largura da div_mestre */
     margin-right: 10%; /* a distância da direita da página até o cabeçalho */
-        margin-left: 10%; /* a distância da esquerda da página até o cabeçalho */
+    margin-left: 10%; /* a distância da esquerda da página até o cabeçalho */
     margin-bottom: 1.5%; /* a distância da parte de baixo da página até o cabeçalho*/
 }
 
@@ -95,7 +98,7 @@ footer {
 
 .txtrodape{
     margin-right: 15px; /*margem da direita*/
-    margin-left: 15px /*margem da esquerda*/
+    margin-left: 15px; /*margem da esquerda*/
 }
 /*classe criada para definir padrões específicos para os botões */
 .botoes{
@@ -108,7 +111,55 @@ footer {
     background-color: rgb(85, 85, 85); /* Define a cor de fundo */
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+
+    header,
+    main,
+    footer {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+
+    main {
+        flex-direction: column;
+    }
+
+
+    nav {
+        width: 100%;
+        order: 1;
+    }
+
+
+    article {
+        width: 100%;
+        order: 2;
+    }
+
+
+    .botoes {
+        width: 90%;
+        font-size: 20px;
+    }
+
+
+    .criadores {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
 </style>
+</head>
+
+
 <body>     
 
     <script>
@@ -141,9 +192,8 @@ footer {
     
         <header> <h1 class="padraotxt"> Página do Mikael, Otávio e Amanda </h1> </header>
         
-        <section>
+        <main>
             <nav>        
-                <p>
                 <button class="botoes" type="button" onclick="trocar_pag(6)"> Página Inicial</button>
                 <button class="botoes" type="button" onclick="trocar_pag(0)"> Currículo Mikael </button>
                 <button class="botoes" type="button" onclick="trocar_pag(1)"> 30PRAUM</button>
@@ -151,13 +201,13 @@ footer {
                 <button class="botoes" type="button" onclick="trocar_pag(3)"> Picarreta </button>
                 <button class="botoes" type="button" onclick="trocar_pag(4)"> Currículo Amanda </button>
                 <button class="botoes" type="button" onclick="trocar_pag(5)"> Dean </button>
-                </p>
             </nav>
                     
-                <article>
-                    <embed id="pagininha" src="pag_principal.html" width="100%" height="600px">
-                </article>
-    </section>
+            <article>
+                <embed id="pagininha" src="pag_principal.html" width="100%" height="100%">
+            </article>
+        </main>
+
         <footer class="criadores2">
             <div class="criadores">
                 <p class="padraotxt">Mikael Jatobá <br> mvaj1@aluno.ifal.edu.br</p>
@@ -166,7 +216,7 @@ footer {
             </div>  
 
             <div>
-                <p class="padraotxt txtrodape direitos-reservados"> &copy 2026 - Todos os direitos reservados. </p>
+                <p class="padraotxt txtrodape direitos-reservados"> &copy; 2026 - Todos os direitos reservados. </p>
             </div>
         
         </footer>  

@@ -1,4 +1,4 @@
-<!-- Mikael Jatobá - ATV04 - Turma 523 -->
+<!-- OTÁVIO, MIKAEL, AMANDA - Turma 523 -->
 <!-- Currículo-->
 
 <!DOCTYPE html>
@@ -7,12 +7,11 @@
 
 <head>
     <meta charset="UTF-8">
-</head>
 
 <style>
 
 /* classe da Div principal que conterá as informações do currículo*/
-.informacoes {
+article {
     width: 90%; /* a div principal vai ocupar 90% da largura da página */
     margin-left: auto; /* a distância da esquerda da página até a tabela vai ser definida automaticamente conforme o zoom*/
     margin-right: auto; /* a distância da direita da página até a tabela vai ser definida automaticamente conforme o zoom */
@@ -83,47 +82,54 @@
     text-align: center; /* os textos serão alinhados ao centro */
 }
 
+img {
+    max-width:100%;
+    height:auto;
+}
 </style>
+</head>
 
 <body class="corpo">
-    <h1 class="padraotxt"> Currículo </h1>
-    <img class="imgredonda" src="./img/ftmikael.jpg" alt="foto_do_mikael" title="Foto do mikael">
-    <h1 class="Mikael">Mikael Jatobá</H1>
+    <main>
+        <h1 class="padraotxt"> Currículo </h1>
+        <img class="imgredonda" src="./img/ftmikael.jpg" alt="foto_do_mikael" title="Foto do mikael">
+        <h1 class="Mikael">Mikael Jatobá</H1>
 
-    <div class="informacoes">
-        <div class="firstinform">
-            <div class="infos xadrez">    
-                <h2 class="padraotxt"> Sobre mim: </h2> 
-                <p class="padraotxt"> Olá, sou o Mikael. Tenho <STRONG> 17 anos </STRONG> e estudo no IFAL - Campus Palmeira dos Índios. <br> Curso <strong> informática </strong> e pretendo seguir carreira na área</p> 
+        <article>
+            <div class="firstinform">
+                <div class="infos xadrez">    
+                    <h2 class="padraotxt"> Sobre mim: </h2> 
+                    <p class="padraotxt"> Olá, sou o Mikael. Tenho <STRONG> 17 anos </STRONG> e estudo no IFAL - Campus Palmeira dos Índios. <br> Curso <strong> informática </strong> e pretendo seguir carreira na área</p> 
+                </div>
+                <div class="infos">  
+                    <h2 class="padraotxt"> Experiências: </h2>   
+                    <p class="padraotxt"> Tenho experiência com edições de vídeo, Python e ferramentas como Word, Excel, PowerPoint</p>     
+                </div>  
+                <div class="infos xadrez">
+                    <h2 class="padraotxt"> Contato </h2> 
+                    <p class="padraotxt"> Telefone: (82) 99922-7796 <br> Instagram: mikaell_vinicius_ <br> E-mail: mvaj1@aluno.ifal.edu.br</p>
+                </div>
             </div>
-            <div class="infos">  
-                <h2 class="padraotxt"> Experiências: </h2>   
-                <p class="padraotxt"> Tenho experiência com edições de vídeo, Python e ferramentas como Word, Excel, PowerPoint</p>     
-            </div>  
-            <div class="infos xadrez">
-                <h2 class="padraotxt"> Contato </h2> 
-                <p class="padraotxt"> Telefone: (82) 99922-7796 <br> Instagram: mikaell_vinicius_ <br> E-mail: mvaj1@aluno.ifal.edu.br</p>
-            </div>
-        </div>
-        <div class="secondinform">
-            <div class="infos">   
-                <h2 class="padraotxt"> Formação </h2>       
-                    <p class="padraotxt"> Complexo Educacional Agostiniano <br> (Infantil-Fundamenta II)</p> 
-                    <p class="formac">2011-2023</p>
-                    <p class="padraotxt"> IFAL Campus Palmeira dos Índios <br> (Ensino Médio)</p>
-                    <p class="formac"> 2024 - (conclusão prevista para 2026) </p>
-            </div>     
-            <div class="infos xadrez">  
-                <h2 class="padraotxt"> Habilidades </h2>  
-                <p class="padraotxt"> Organização exemplar</p>
-                <p class="padraotxt"> Atividades em grupo</p>
-                <p class="padraotxt"> Boa comunicação</p>
-            </div> 
-            <div class="infos"> 
-                <h2 class="padraotxt"> Idiomas</h2> 
-                <p class="padraotxt"> Espanhol: Intermediário</p>
-                <p class="padraotxt"> Inglês: Iniciante</p> 
-            </div>
-        </div>    
-    </div>                 
+            <div class="secondinform">
+                <div class="infos">   
+                    <h2 class="padraotxt"> Formação </h2>       
+                        <p class="padraotxt"> Complexo Educacional Agostiniano <br> (Infantil-Fundamenta II)</p> 
+                        <p class="formac">2011-2023</p>
+                        <p class="padraotxt"> IFAL Campus Palmeira dos Índios <br> (Ensino Médio)</p>
+                        <p class="formac"> 2024 - (conclusão prevista para 2026) </p>
+                </div>     
+                <div class="infos xadrez">  
+                    <h2 class="padraotxt"> Habilidades </h2>  
+                    <p class="padraotxt"> Organização exemplar</p>
+                    <p class="padraotxt"> Atividades em grupo</p>
+                    <p class="padraotxt"> Boa comunicação</p>
+                </div> 
+                <div class="infos"> 
+                    <h2 class="padraotxt"> Idiomas</h2> 
+                    <p class="padraotxt"> Espanhol: Intermediário</p>
+                    <p class="padraotxt"> Inglês: Iniciante</p> 
+                </div>
+            </div>    
+        </article> 
+    </main>               
 </body>
